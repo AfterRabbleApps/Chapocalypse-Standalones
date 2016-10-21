@@ -8,7 +8,7 @@ before_install:
  - chmod +x ./Scripts/install.sh
  - chmod +x ./Scripts/build.sh
 deploy:
- -	skip_cleanup: true
+    skip_cleanup: true
 install:
 - ./Scripts/install.sh
 script:
