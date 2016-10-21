@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
-using GooglePlayGames;
-using GooglePlayGames.BasicApi.Multiplayer;
+
 
 public class GameManager : MonoBehaviour {
 
@@ -35,10 +34,6 @@ public class GameManager : MonoBehaviour {
 
 
 
-    void Awake ()
-    {
-        MultiplayerController.Instance.TrySilentSignIn();
-    }
 
 	void Start () 
 	{
@@ -155,29 +150,7 @@ public class GameManager : MonoBehaviour {
 	{
 		Application.Quit ();
 	}
-
-
-    public void SignIn ()
-    {
-        MultiplayerController.Instance.SignInAndStartMPGame();
-    }
-    public void leaderboard()
-    {
-        MultiplayerController.Instance.SignInAndStartMPGame();
-        PlayGamesPlatform.Instance.ShowLeaderboardUI();
-
-    }
-
-    public void SignOut() {
-        PlayGamesPlatform.Instance.SignOut ();
-    }
-
-
-    public bool IsAuthenticated() {
-        return PlayGamesPlatform.Instance.localUser.authenticated;
-    }
-
-
+        
 	public void GameOverScript (){
 		
 			GameOverCanvas.SetActive (true);
