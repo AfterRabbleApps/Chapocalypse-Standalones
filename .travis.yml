@@ -1,6 +1,8 @@
 # Example Travis config. See the entire example: https://github.com/JonathanPorta/ci-build
 
 language: objective-c
+cache:
+  - bundler
 osx_image: xcode61
 rvm:
 - 2.1.2
@@ -13,3 +15,10 @@ install:
 - ./Scripts/install.sh
 script:
 - ./Scripts/build.sh
+deploy:
+  provider: releases
+  api_key: "147b9cda094879aa107793be139337cd66a3cbc0"
+  file: "Chapocalypse-Standalones.exe"
+  skip_cleanup: true
+  on:
+    tags: true
