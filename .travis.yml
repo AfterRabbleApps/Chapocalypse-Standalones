@@ -17,8 +17,11 @@ script:
 - ./Scripts/build.sh
 deploy:
   provider: releases
-  api_key: "147b9cda094879aa107793be139337cd66a3cbc0"
   file: "Chapocalypse-Standalones.exe"
   skip_cleanup: true
   on:
     tags: true
+ 
+deploy:
+  api-key:
+    secure: J2jXEcbJn8HSW+ewfumJvRqsS/qKXJ+2IHEQelPNHLoHd7j4lTQcKr7oCP3DGQ7XFKd/QSmVh05RWZS6PHoZubCNjrh8SbKsBNNhf4hytWy1EHOszp9LW45hQ7NEGNpMdYUfbjgEdXwH/TQNfwwQP5WHNMoj2qlylPrXF27WsdF1b18UJ8P5tWatL0joWdSI7aWadYFs/CHU/2iikRZOlcLQlXFsFVrHTERup5lR1V3d1tAu7ErPokD7w8adPGrJZZ+ruwN2jY3G5ND+aY+nRiYzr8GQx/mmZLMcks5pcEpYStUTfzP30e3E0+j8bfd08P6ZZ0nR/YahxebVNn/Ij0p1lSH6hl0hL5k2qpTl1NWBkbs7jEDueITb98N92r7hm90DtQqipDg4bG/kGdS6R2nbVL9a40l8npVoloQbuos+DENm1Gf92TapGZ4C3ic5tVYS3Ms+Sn3ee2GEYITblEBC9QPTPjGL3Kt1VYTzmdMAWcBS6khyKnGmkoizM2syMW3ceLJHybAeR4H5J+N6LBnftcpMoiG0mIAOf2Ooei5So/T1u/OUdPmvb29bBWS6QWYu7onpaCOiwVpbaZ2n/JMNooOe91Z4CS7ikVsR5RkXlKY7BZWRtDstA+A+uHwKDmRhaZ8IE1PEdMntP9B5YoOrNbzJkQWWNaIYjWqKtnE=
